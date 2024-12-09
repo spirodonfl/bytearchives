@@ -1,0 +1,107 @@
+<html></html>
+    <head>
+        <title>Byte Archives</title>
+        <style>
+            body {
+                position: relative;
+                font-size: 100%;
+                min-height: 100%;
+                max-width: 100vw;
+                margin: 0;
+
+                background-color: rgb(17 24 39);
+                color: #fff;
+                text-rendering: optimizeLegibility;
+                font-family: 'Arial', sans-serif;
+                text-size-adjust: 100%;
+
+                font-size: 1.2rem;
+            }
+
+            #top_menu {
+                background-color: rgb(31 41 55);
+                display: grid;
+                grid-auto-flow: column;
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+            #top_name {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            #top_menu_items {
+                display: grid;
+                grid-auto-flow: column;
+                align-content: center;
+                justify-content: space-around;
+            }
+
+            ul li {
+                margin-bottom: 1rem;
+            }
+
+            .button {
+                padding: 1rem;
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+                padding: 0.6rem;
+                text-decoration: none;
+                color: #fff;
+                background-color: #000;
+                border: 1px solid #fff;
+                border-radius: 0.2rem;
+                text-align: center;
+            }
+
+            body.light-mode {
+                background-color: rgb(17 24 39);
+                color: #fff;
+            }
+            body.light-mode #top_menu {
+                background-color: rgb(241 245 249);
+                color: #000;
+            }
+            body.light-mode .button {
+                background-color: #fff;
+                color: #000;
+                border: 1px solid #000;
+            }
+        </style>
+        <script>
+            function toggleLightMode() {
+                document.body.classList.toggle('light-mode');
+                // set in local storage
+                localStorage.setItem('light-mode', document.body.classList.contains('light-mode'));
+            }
+
+            // check if light mode is set in local storage
+            if (localStorage.getItem('light-mode') === 'true') {
+                document.body.classList.add('light-mode');
+            }
+        </script>
+    </head>
+    <body>
+        <div id="top_menu">
+            <div id="top_name">Byte Archives</div>
+            <div id="top_menu_items">
+                <div id="top_menu_item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div id="top_menu_item">
+                    <a href="search.html"></a>Search</a>
+                </div>
+                <div id="top_menu_item">
+                    <a href="categories.html">Categories</a>
+                </div>
+                <div id="top_menu_item">
+                    <div class="light_mode_button" onclick="toggleLightMode()">Light Mode</div>
+                </div>
+            </div>
+        </div>
+        <div id="search_content">
+            <h1>Search</h1>
+            <input type="text" id="search_input" placeholder="Search for a topic">
+        </div>
+    </body>
+</html>
