@@ -1,4 +1,4 @@
-<html>
+<html></html>
     <head>
         <title>Byte Archives</title>
         <style>
@@ -35,28 +35,6 @@
                 grid-auto-flow: column;
                 align-content: center;
                 justify-content: space-around;
-            }
-
-            #main_content {
-                padding: 2rem;
-                margin-bottom: 1rem;
-            }
-
-            #second_content {
-                padding: 2rem;
-                margin-bottom: 1rem;
-            }
-
-            #third_content {
-                padding: 2rem;
-                margin-bottom: 1rem;
-            }
-
-            #actions {
-                padding: 2rem;
-                display: grid;
-                grid-auto-flow: column;
-                gap: 1rem;
             }
 
             ul li {
@@ -97,6 +75,11 @@
             body.light-mode a {
                 color: #000;
             }
+            
+
+            #content {
+                padding: 1rem;
+            }
         </style>
         <script>
             function toggleLightMode() {
@@ -129,33 +112,16 @@
                 </div>
             </div>
         </div>
-        <div id="main_content">
-            <h1>Welcome to Byte Archives</h1>
-            This is a one man effort (me: <a href="https://spirofloropoulos.com">Spiro Floropoulos</a>) to provide a centralized platform where C programmers of all levels can access concise, high-quality information on various aspects of the C language.
-        </div>
-        <div id="second_content">
-            Hopefully I will have a variety of resources here related to things you won't generally find in other places. I will be scouring discord, X, reddit, streams, past videos, github, etc, and pulling information from key individuals to create content you won't find anywhere else.
-            Some of the people I will be pulling information from are:
-            <ul>
-                <li><a href="https://t.co/IYFWI0niYt">Martins Mozeiko</a></li>
-                <li><a href="https://computerenhance.com">Casey Muratori</a></li>
-                <li><a href="https://x.com/Jonathan_Blow">Jonathan Blow</a></li>
-                <li><a href="https://www.gingerbill.org/">Ginger Bill</a></li>
-                <li>and more</li>
-            </ul>
-        </div>
-        <div id="third_content">
-            <p><strong>What you'll find here</strong></p>
-            <ul>
-                <li>Expert insights and tips on C programming</li>
-                <li>Best practices and common pitfalls to avoid</li>
-                <li>Deep dives into complex C concepts</li>
-                <li>Practical examples and code snippets</li>
-            </ul>
-        </div>
-        <div id="actions">
-            <a href="#" class="button">Get Started</a>
-            <a href="#" class="button">Explore Categories</a>
+        <div id="content">
+            <h1>Bignum Math</h1>
+            <p>Bignum Math is a library for performing arithmetic operations on large numbers.</p>
+            <p>How might you accomplish this using bmi2 & adx?</p>
+            <p>From Martins Mozeiko</p>
+            <p>"Without simd best you can do is bmi2 and adx. That's how fastest x25519 curve implementations are done
+                here: https://www.amazon.science/blog/better-performing-25519-elliptic-curve-cryptography
+                and here: https://lib25519.cr.yp.to/speed.html"</p>
+            <p>"it does a bit more, because it needs to reduce result by curve modulo. it needs to calculate (a * b) % p, not just a*b"</p>
+            <p>"that article is about their s2n-bignum library"</p>
         </div>
     </body>
 </html>
