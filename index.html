@@ -73,6 +73,7 @@
                 background-color: #000;
                 border: 1px solid #fff;
                 border-radius: 0.2rem;
+                text-align: center;
             }
 
             body.light-mode {
@@ -89,15 +90,35 @@
                 border: 1px solid #000;
             }
         </style>
+        <script>
+            function toggleLightMode() {
+                document.body.classList.toggle('light-mode');
+                // set in local storage
+                localStorage.setItem('light-mode', document.body.classList.contains('light-mode'));
+            }
+
+            // check if light mode is set in local storage
+            if (localStorage.getItem('light-mode') === 'true') {
+                document.body.classList.add('light-mode');
+            }
+        </script>
     </head>
     <body>
         <div id="top_menu">
             <div id="top_name">Byte Archives</div>
             <div id="top_menu_items">
-                <div id="top_menu_item">Home</div>
-                <div id="top_menu_item">Search</div>
-                <div id="top_menu_item">Categories</div>
-                <div id="top_menu_item">Light Mode</div>
+                <div id="top_menu_item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div id="top_menu_item">
+                    <a href="search.html"></a>Search</a>
+                </div>
+                <div id="top_menu_item">
+                    <a href="categories.html">Categories</a>
+                </div>
+                <div id="top_menu_item">
+                    <div class="light_mode_button" onclick="toggleLightMode()">Light Mode</div>
+                </div>
             </div>
         </div>
         <div id="main_content">
