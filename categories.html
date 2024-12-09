@@ -97,11 +97,13 @@
                 document.getElementById('light_mode_button').innerHTML = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
             }
 
-            // check if light mode is set in local storage
-            if (localStorage.getItem('light-mode') === 'true') {
-                document.body.classList.add('light-mode');
-                document.getElementById('light_mode_button').innerHTML = 'Dark Mode';
-            }
+            window.addEventListener('load', () => {
+                // check if light mode is set in local storage
+                if (localStorage.getItem('light-mode') === 'true') {
+                    document.body.classList.add('light-mode');
+                    document.getElementById('light_mode_button').innerHTML = 'Dark Mode';
+                }
+            });
         </script>
     </head>
     <body>
