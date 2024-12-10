@@ -139,7 +139,15 @@
                 </div>
             </div>
         </div>
-        <div id="content">
+        <style>
+    #content {
+        padding: 2rem;
+        display: grid;
+        grid-auto-flow: row;
+        gap: 1rem;
+    }
+</style>
+<div id="content">
     <blockquote style="display: none;">
         ANON: So I am use portaudio to do audio for my game project because I wanted to do manual audio mixing, sterio panning etc. at least once before I use a library that does all this for me at least once.
         The portaudio library works by calling a callback in which I give it the audio samples for a indeterminate amount of time, which probably gets called on another thread.
