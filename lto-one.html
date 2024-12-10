@@ -153,8 +153,7 @@
     <p>From Martins Mozeiko</p>
     <blockquote>Modern compilers do exactly the same optimizations at link time as they do at compile time. Specifically, they call the same code inside compiler/linker to do optimizations on IR + further levels.</blockquote>
     <blockquote>For example, when clang compiles with LTO enabled, its .obj files are actually LLVM bytecode. The linker obviously cannot do with those anything to output machine code so it calls the compiler to optimize to lower level machine code.</blockquote>
-    <blockquote>MSVC and GCC does the same.</blockquote>
-    <blockquote>The point of LTO is to offer better optimization possibilities. However, it's harder to multithread. With a compiler, it's trivial because you can do each TU individually.</blockquote>
+    <blockquote>MSVC and GCC does the same. The point of LTO is to offer better optimization possibilities. However, it's harder to multithread. With a compiler, it's trivial because you can do each TU individually.</blockquote>
 </div>
     </body>
 </html>
