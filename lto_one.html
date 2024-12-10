@@ -1,6 +1,6 @@
 <html></html>
     <head>
-        <title>Byte Archives - Categories</title>
+        <title>Byte Archives - Link Time Optimization</title>
         <style>
     body {
         position: relative;
@@ -132,20 +132,19 @@
         <style>
     #content {
         padding: 2rem;
+        display: grid;
+        grid-auto-flow: row;
+        gap: 1rem;
     }
 </style>
 <div id="content">
-    <h1>Categories</h1>
-    <ul>
-        <li><a href="/sample.html">Bignum Math</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/18ln8SKIGRK5_6NymgdB9oLbTJCFwx0iFI-vUs6WFyuE/edit?gid=1076260513#gid=1076260513">Cardyak's Microarchitecture Cheat Sheet
-        </a></li>
-        <li><a href="https://drive.google.com/drive/folders/1W4CIRKtNML74BKjSbXerRsIzAUk3ppSG">
-            Cardyak's Microarchitecture Block Diagram Images
-        </a></li>
-        <li><a href="/lto-one.html">Link Time Optimization</a></li>
-    </ul>
-    <h2>Please bear with me. More categories coming soon!</h2>
+    <h1>Link Time Optimization</h1>
+    <p>LTO One is a compiler optimization technique that allows for faster and more efficient code execution.</p>
+    <p>From Martins Mozeiko</p>
+    <blockquote>Modern compilers do exactly the same optimizations at link time as they do at compile time. Specifically, they call the same code inside compiler/linker to do optimizations on IR + further levels.</blockquote>
+    <blockquote>For example, when clang compiles with LTO enabled, its .obj files are actually LLVM bytecode. The linker obviously cannot do with those anything to output machine code so it calls the compiler to optimize to lower level machine code.</blockquote>
+    <blockquote>MSVC and GCC does the same.</blockquote>
+    <blockquote>The point of LTO is to offer better optimization possibilities. However, it's harder to multithread. With a compiler, it's trivial because you can do each TU individually.</blockquote>
 </div>
     </body>
 </html>
